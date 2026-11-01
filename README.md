@@ -1,16 +1,47 @@
-# React + Vite
+# Posts App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение для публикации постов на React: создание, поиск, сортировка, оценки и удаление с подтверждением. Учебный проект, написанный самостоятельно.
 
-Currently, two official plugins are available:
+**Демо:** ССЫЛКА_НА_ДЕМО
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Скриншот](screenshot.png)
 
-## React Compiler
+## Что умеет
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Создание постов с проверкой полей и сообщениями об ошибках под ними
+- Лайки и дизлайки: на пост можно поставить одну оценку, голос можно сменить
+- Удаление поста с окном подтверждения
+- Поиск по названию и счётчик найденных постов
+- Сортировка по лайкам, по дате и по умолчанию
+- При первом открытии стартовые посты загружаются с API (JSONPlaceholder), с индикатором загрузки и сообщением об ошибке
+- Данные хранятся в `localStorage` и сохраняются после перезагрузки страницы
+- Адаптивная вёрстка (проверено от 360px)
 
-## Expanding the ESLint configuration
+## Технологии
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React, Vite, JavaScript, CSS
+
+Хуки: `useState`, `useEffect`, `useMemo` и собственный хук `useLocalStorage`.
+
+## Как запустить
+
+```bash
+git clone ССЫЛКА_НА_РЕПОЗИТОРИЙ
+cd posts-app
+npm install
+npm run dev
+```
+
+Сборка: `npm run build`
+
+## Структура
+
+- `src/components/` страница и список постов, форма (`PostForm`, `PostsList`)
+- `src/UI/` переиспользуемые компоненты `MyButton` и `MyInput`
+- `src/hooks/useLocalStorage.js` состояние, которое синхронизируется с `localStorage`
+
+## Особенности и ограничения
+
+- JSONPlaceholder это тестовый API: созданные посты на сервер не отправляются, а хранятся только в браузере.
+- Окно «Вам понравился наш сайт?» показывается один раз за загрузку страницы (так задумано для демонстрации).
+- Если первая загрузка постов не удалась, форма скрыта, а после обновления страницы загрузка повторяется.
