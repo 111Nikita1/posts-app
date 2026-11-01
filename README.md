@@ -26,7 +26,7 @@ React, Vite, JavaScript, CSS
 ## Как запустить
 
 ```bash
-git clone ССЫЛКА_НА_РЕПОЗИТОРИЙ
+git clone https://github.com/111Nikita1/posts-app.git
 cd posts-app
 npm install
 npm run dev
