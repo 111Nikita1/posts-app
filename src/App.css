@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: rgb(26, 0, 51);
+    min-height: 100%;
+}
+
+#root {
+    background-color: rgb(26, 0, 51);
+    min-height: 100vh;
+    color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 15px;
+}
+
+.notification {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    background-color: bisque;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: rgb(26, 0, 51);
+    border: 1px solid rgb(83, 2, 158);
+}
+
+.postForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px auto;
+    border: 1px solid bisque;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 700px;
+}
+
+.postForm div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.sortBtn {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+    border: 1px solid bisque;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 700px;
+}
+
+.allPosts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 700px;
+}
+
+.allPosts h2{
+    display: flex;
+    justify-content: center;
+}
+
+.posts {
+    border-radius: 5px;
+    display: flex;
+    border: 1px solid bisque;
+    justify-content: space-between;
+    min-height: 100px;
+}
+
+.posts button {
+    height: 30px;
+    width: 30px;
+    padding: 5px 5px;
+}
+
+.titleBody {
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.elementPosts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.delBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+}
+
+.likeBtn {
+    margin-right: 15px;
+    display: flex;
+    gap: 2px;
+    margin-bottom: 15px;
+}
+
+.likeBtn button{
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.postsLength {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer{
+    align-items: end;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding: 30px;
+    background-color: rgb(33, 0, 65);
+}
+
+@media (max-width: 600px) {
+    .footer{
+        padding: 15px;
+    }
+    .allPosts {
+        padding: 15px;
+    }
+    .search {
+        padding: 15px;
+    }
+    .postForm {
+        padding: 15px;
+    }
+}
+
+.postsNotFound {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.noPosts {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.errorInput {
+    color: red;
+    align-self: flex-start;
+}
+
+.titleBody p {
+    white-space: normal;
+    max-width: 500px;
+    overflow-wrap: break-word;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+}

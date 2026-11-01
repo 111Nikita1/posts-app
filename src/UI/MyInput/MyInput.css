@@ -1,0 +1,9 @@
+.MyInput {
+    padding: 5px 5px;
+    background-color: bisque;
+    border: 2px solid rgb(83, 2, 158);
+    color: rgb(0, 0, 0);
+    max-width: 500px;
+    width: 100%;
+    border-radius: 5px;
+}
